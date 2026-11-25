@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cleats</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Times New Roman", Times, serif, sans-serif;
+            color: #000000;
+            background: #afe7ee;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        /* NAVBAR */
+        .navbar {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            align-items: center;
+            padding: 12px 24px;
+            border-bottom: 1px solid #ddd;
+            position: sticky;
+            top: 0;
+            background: #fff;
+            z-index: 10;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            font-weight: 600;
+        }
+
+        .nav-links .active {
+            border-bottom: 2px solid #c0392b;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+            color: #000000;
+        }
+
+        .nav-right {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .nav-right input {
+            width: 220px;
+            padding: 8px 14px;
+            border: 1px solid #aaa;
+            border-radius: 20px;
+        }
+
+        /* LAYOUT */
+        .layout {
+            display: grid;
+            grid-template-columns: 240px 1fr;
+        }
+
+        /* SIDEBAR */
+        .sidebar {
+            padding: 20px;
+            border-right: 1px solid #eee;
+        }
+
+        .sidebar h3 {
+            font-size: 13px;
+            margin: 18px 0 8px;
+            padding-bottom: 6px;
+            border-bottom: 1px solid #ddd;
+            text-decoration: underline;
+        }
+
+        .sidebar label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 5px 0;
+            font-size: 14px;
+        }
+
+        .sidebar label span {
+            margin-left: auto;
+            color: #888;
+            font-size: 12px;
+        }
+
+        .dot {
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .sizes {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .sizes button {
+            padding: 5px 10px;
+            background: #fff;
+            border: 1px solid #555;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .sizes button:hover {
+            background: #222;
+            color: #fff;
+        }
+
+        /* PRODUCT GRID */
+        .content {
+            padding: 20px 24px;
+        }
+
+        .count {
+            font-size: 14px;
+            margin-bottom: 16px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: #fff;
+            padding: 10px;
+            border-radius: 12px;
+        }
+
+        .card h3,
+        .card h4 {
+            font-size: 14px;
+            margin-top: 8px;
+        }
+
+        .card p {
+            font-size: 13px;
+            color: #777;
+            margin: 2px 0 6px;
+        }
+
+        .card img {
+            width: 100%;
+            aspect-ratio: 3 / 4;
+            object-fit: contain;
+            mix-blend-mode: multiply;
+            background: #ffff;
+            border-radius: 10px;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <nav class="nav-links">
+            <a href="Studs.html" class="active">Football Shoes</a>
+            <a href="index.html">Football Jerseys</a>
+        </nav>
+        <a href="#" class="logo">Football &#9917;</a>
+        <div class="nav-right">
+            <input type="search" placeholder="Search">
+            <a href="https://accounts.google.com/v3/signin/identifier?continue=https://accounts.google.com/&followup=https://accounts.google.com/&passive=1209600&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S419769860:1795594185720714"
+                target="_blank" title="Account">&#128100;</a>
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1" target="_blank"
+                title="Wishlist">&#9825;</a>
+            <a href="#" title="Cart">&#128722;</a>
+        </div>
+    </header>
+
+    <div class="layout">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <h3>Brand</h3>
+            <label><input type="radio" name="Brand" checked> Addidas <span>2</span></label>
+            <label><input type="radio" name="Brand" checked> Nike <span>2</span></label>
+            <label><input type="radio" name="Brand" checked> Nivia <span>2</span></label>
+            <label><input type="radio" name="Brand" checked> Puma <span>2</span></label>
+            <label><input type="radio" name="Brand" checked> Vector-X <span>2</span></label>
+
+
+            <h3>Size</h3>
+            <div class="sizes">
+                <button>6</button> <button>7</button> <button>8</button> <button>9</button> <button>10</button>
+                <button>11</button> <button>12</button>
+            </div>
+
+            <h3>Type</h3>
+            <label><input type="checkbox">Artificial Ground <span>10</span></label>
+            <label><input type="checkbox"> Natural Grass <span>10</span></label>
+        </aside>
+
+        <!-- PRODUCT GRID -->
+        <main class="content">
+            <p class="count">Football Shoes &ndash; 10 items</p>
+            <section class="grid">
+                <article class="card">
+                    <img src="https://images.jdmagicbox.com/quickquotes/images_main/nivia-storm-lace-up-closure-football-shoe-2210891680-cn0nmwhg.jpg"
+                        alt="Nivia Storm">
+                    <h4><a href="https://www.amazon.in/Nivia-Storm-Football-White-Numeric_11/dp/B08XXR5MK2/ref=asc_df_B08XXR5MK2?mcid=f382a3a703c333cabbe933fc5861a737&tag=googleshopdes-21&linkCode=df0&hvadid=709856201430&hvpos=&hvnetw=g&hvrand=6661953481681977623&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9146417&hvtargid=pla-1199658870457&hvcampaign=21596138614&hvocijid=6661953481681977623-B08XXR5MK2-&hvexpln=0&gad_source=1&th=1&psc=1"
+                            target="_blank"> Nivia</a></h4>
+                    <p>Storm Football Shoes for Men and Children</p>
+                    <strong>&#8377;699</strong>
+                </article>
+
+                <article class="card">
+                    <img src="https://m.media-amazon.com/images/I/71MUFZeg-7L._SL1500_.jpg" alt="Nivia Encounter 4.0">
+                    <h4><a href="https://www.amazon.in/Nivia-Carbonite-Futsal-Shoes-Ground/dp/B09B9YC954?th=1&psc=1"
+                            target="_blank">Nivia</a></h4>
+                    <p>Carbonite 4.0 for Men and Children</p>
+                    <strong>&#8377;807</strong>
+                </article>
+
+                <article class="card">
+                    <img src="https://dms.mydukaan.io/original/jpeg/media/5d2055cf-65f0-4b9b-acaf-6d280c9aa70a.jpg"
+                        alt="Adias F50">
+                    <h3><a href="https://www.myntra.com/sports-shoes/adidas/adidas-unisex-f50-league-tf-football-shoes/29884900/buy"
+                            target="_blank">Adidas</a></h3>
+                    <p>Unisex F50 League TF Football Shoes</p>
+                    <strong>&#8377;7,999</strong>
+                </article>
+
+                <article class="card">
+                    <img src="https://m.media-amazon.com/images/I/816DWMGbS7L._SY695_.jpg" alt="Adidas Predator">
+                    <h3><a href="https://www.amazon.in/adidas-Predator-League-Ground-Football/dp/B0FWGYP845?th=1&psc=1"
+                            target="_blank">Adidas</a></h3>
+                    <p>Predator League Firm Ground Football Boots, White</p>
+                    <strong>&#8377;7,999</strong>
+                </article>
+
+                <article class="card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlZtIq5J8GK6hVnBk9aV5L8oxL7jzk5LKcHy9g7vKPEBNSVH7D3jw_DC0K&s=10"
+                        alt="Nike Phantom 6">
+                    <h3><a href="https://www.amazon.in/Nike-Phantom-Crimson-Blur-Black-Football/dp/B0G1YSXSSP/ref=asc_df_B0G1YSXSSP?mcid=15a007adcb1a3912a1921805e0dcb5ad&tag=googleshopdes-21&linkCode=df0&hvadid=820880167140&hvpos=&hvnetw=g&hvrand=4687174593425700233&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9146417&hvtargid=pla-2499661984228&hvcampaign=23816804581&hvocijid=4687174593425700233-B0G1YSXSSP-&hvexpln=0&gad_source=1&th=1&psc=1"
+                            target="_blank">Nike</a></h3>
+                    <p>Mens Phantom 6 Low Club Football Shoes </p>
+                    <strong>&#8377;5,995</strong>
+                </article>
+
+                <article class="card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR15MCLe-R_CXpPXzpzDc1w0tB9Y_kRPqcYsTPz7tBGiyNGqrDS-mxWksc&s=10"
+                        alt="Nike Mercurial">
+                    <h3><a href="https://www.myntra.com/sports-shoes/nike/nike-mercurial-vapor-16-academy-mg-low-top-football-boot/30166452/buy"
+                            target="_blank">Nike</a></h3>
+                    <p>Mercurial Vapor 16 Academy MG Low-Top Football Boot</p>
+                    <strong>&#8377;7,995</strong>
+                </article>
+
+                <article class="card">
+                    <img src="https://www.futbolemotion.com/imagesarticulos/254594/750/bota-puma-future-8-match-mg-amarillo-0.webp"
+                        alt="Puma future 8">
+                    <h3><a href="https://in.puma.com/in/en/pd/future-8-match-fg-ag-football-boots/108140?srsltid=AYCX9vKLEP2cPr5OsgU9_CQQIkSSquKiEv0zQD7HTUtUHdc-En8VBcxZ"
+                            target="_blank">Puma</a></h3>
+                    <p>FUTURE 8 MATCH FG/AG Football Boots</p>
+                    <strong>&#8377;4,799</strong>
+                </article>
+
+                <article class="card">
+                    <img src="https://assets.myntassets.com/assets/images/24190068/2023/7/25/73f9ccea-5dd2-4997-8dfc-6d289711704f1690301392300PumaATTACANTOFGAGMenFootballShoes1.jpg"
+                        alt="Puma Attacanto">
+                    <h3><a href="https://www.myntra.com/sports-shoes/puma/puma-attacanto-fgag-men-lightweight-football-boots/24190068/buy"
+                            target="_blank">Puma</a></h3>
+                    <p>ATTACANTO FG/AG Men Lightweight Football Boots</p>
+                    <strong>&#8377;4,499</strong>
+                </article>
+
+                <article class="card">
+                    <img src="https://www.vector-x.com/cdn/shop/files/spectre-football-shoe-red-6.jpg?v=1775727904"
+                        alt="Vector X Spectre 2.0">
+                    <h3><a href="https://www.vector-x.com/products/vector-x-spectre-2-0-football-stud-shoe-for-kids-tpu-sole-embossed-upper-soccer-shoe?srsltid=AYCX9vLDyyrsm1gW42-9jqf2z7rj7K1bgIfOkzTtMYi0wL_JghVnYmx1"
+                            target="_blank">Vector X</a></h3>
+                    <p>Vector X Spectre 2.0 Kids Football Shoes with TPU Stud Sole & Embossed Upper for Training and
+                        Match Play</p>
+                    <strong>&#8377;999</strong>
+                </article>
+
+                <article class="card">
+                    <img src="https://www.vector-x.com/cdn/shop/files/JAGUAR-ORG-BLK-1.jpg?v=1741684159"
+                        alt="Vector X Jaguar">
+                    <h3><a
+                            href="https://www.vector-x.com/products/jaguar-blk-orng-4?srsltid=AYCX9vKrUSaO3pNAHZQUPffEGu2Bi-8bnab5CbxpK5kR9rSyJzGEH0Ym">Vector
+                            X</a></h3>
+                    <p>Vector X Jaguar Men's Football Shoes with Rib Ankle Support & TPU Stud Sole for Turf and Ground
+                        Play</p>
+                    <strong>&#8377;2,175</strong>
+                </article>
+            </section>
+        </main>
+
+    </div>
+</body>
+
+</html>

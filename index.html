@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cleats</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Times New Roman", Times, serif, sans-serif;
+            color: #000000;
+            background: #afe7ee;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        /* NAVBAR */
+        .navbar {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            align-items: center;
+            padding: 12px 24px;
+            border-bottom: 1px solid #ddd;
+            position: sticky;
+            top: 0;
+            background: #fff;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            font-weight: 600;
+        }
+
+        .nav-links .active {
+            border-bottom: 2px solid #c0392b;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+            color: #000000;
+        }
+
+        .nav-right {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .nav-right input {
+            width: 220px;
+            padding: 8px 14px;
+            border: 1px solid #aaa;
+            border-radius: 20px;
+        }
+
+        /* LAYOUT */
+        .layout {
+            display: grid;
+            grid-template-columns: 240px 1fr;
+        }
+
+        /* SIDEBAR */
+        .sidebar {
+            padding: 20px;
+            border-right: 1px solid #eee;
+        }
+
+        .sidebar h3 {
+            font-size: 13px;
+            margin: 18px 0 8px;
+            padding-bottom: 6px;
+            border-bottom: 1px solid #ddd;
+            text-decoration: underline;
+        }
+
+        .sidebar label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 5px 0;
+            font-size: 14px;
+        }
+
+        .sidebar label span {
+            margin-left: auto;
+            color: #888;
+            font-size: 12px;
+        }
+
+        .dot {
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .sizes {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .sizes button {
+            padding: 5px 10px;
+            background: #fff;
+            border: 1px solid #555;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .sizes button:hover {
+            background: #222;
+            color: #fff;
+        }
+
+        /* PRODUCT GRID */
+        .content {
+            padding: 20px 24px;
+        }
+
+        .count {
+            font-size: 14px;
+            margin-bottom: 16px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: #fff;
+            padding: 10px;
+            border-radius: 12px;
+        }
+
+        .card h3,
+        .card h4 {
+            font-size: 14px;
+            margin-top: 8px;
+        }
+
+        .card p {
+            font-size: 13px;
+            color: #777;
+            margin: 2px 0 6px;
+        }
+
+        .card img {
+            width: 100%;
+            aspect-ratio: 3 / 4;
+            object-fit: contain;
+            mix-blend-mode: multiply;
+            background: #ffff;
+            border-radius: 10px;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <nav class="nav-links">
+            <a href="Studs.html">Football Shoes</a>
+            <a href="index.html" class="active">Football Jerseys</a>
+        </nav>
+        <a href="#" class="logo">Football &#9917;</a>
+        <div class="nav-right">
+            <input type="search" placeholder="Search">
+            <a href="https://accounts.google.com/v3/signin/identifier?continue=https://accounts.google.com/&followup=https://accounts.google.com/&passive=1209600&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S419769860:1795594185720714"
+                target="_blank" title="Account">&#128100;</a>
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1" target="_blank"
+                title="Wishlist">&#9825;</a>
+            <a href="#" title="Cart">&#128722;</a>
+        </div>
+    </header>
+
+    <div class="layout">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <h3>Type</h3>
+            <label><input type="radio" name="Brand" checked> Addidas <span>2</span></label>
+            <label><input type="radio" name="Brand" checked> Nike <span>3</span></label>
+            <label><input type="radio" name="Brand" checked> Puma <span>1</span></label>
+
+            <h3>Size</h3>
+            <div class="sizes">
+                <button>S</button> <button>M</button> <button>L</button> <button>XL</button> <button>XXL</button>
+            </div>
+        </aside>
+
+        <!-- PRODUCT GRID -->
+        <main class="content">
+            <p class="count">Football Jerseys &ndash; 6 items</p>
+            <section class="grid">
+                <article class="card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2MyJEA1GmazCcJF53As6hLyVe4-u4TB-3He5Ld0Q00dG_5F0W8N_20GqX&s=10"
+                        alt="Real Madrid Away">
+                    <h3><a href="https://retrostrips.in/products/real-madrid-away-2026-27-full-sleeves-player-version"
+                            target="_blank">Real Madrid</a></h3>
+                    <p>Real Madrid Away Kit 2026-27</p>
+                    <strong>&#8377;1,299</strong>
+                </article>
+
+                <article class="card">
+                    <img src="https://shop.atleticodemadrid.com/on/demandware.static/-/Sites-atm-master-catalog/default/dw6a9d0b45/II1893-101_jugador.jpg"
+                        alt="Atletico Madrid">
+                    <h3><a href="https://retrokitfits.com/products/atletico-madrid-26-27-home-shirt?variant=55313487266125&country=IN&currency=INR&utm_medium=product_sync&utm_source=google&utm_content=sag_organic&utm_campaign=sag_organic&srsltid=AYCX9vJTmkOIJyQk09GldoSoXjFvj7L4J1YFiSFrDm6qVV-RgWL3aZQF2NM"
+                            target="_blank">Atletico Madrid</a></h3>
+                    <p>Atletico Madrid Home 2026-27</p>
+                    <strong>&#8377;3,700</strong>
+                </article>
+
+                <article class="card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkbVfD7cSOGpCtKP0PTRmSauUXoNhDK8habPlVBogJEg6AYoFXqXr2SuFA&s=10"
+                        alt="FC Barcelona">
+                    <h3><a href="https://www.ajio.com/nike-fc-barcelona-2026-27-stadium-home-regular-fit-t-shirt/p/469826517_multi#gmf"
+                            target="_blank">FC Barcelona</a></h3>
+                    <p>FC Barcelona Home 2026-27</p>
+                    <strong>&#8377;5,095</strong>
+                </article>
+
+                <article class="card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwE5g9b-pml3yAzub5E5T8YNiqqAwFaZ-2Wr-paYU7ag&s=10"
+                        alt="PSG Home">
+                    <h3><a href="https://www.amazon.in/Nike-Paris-Saint-Germain-Stadium-T-Shirt/dp/B0FNRPYTBD?source=ps-sl-shoppingads-lpcontext&ref_=fplfs&smid=A2O5KR0Y95DC4B&th=1&psc=1"
+                            target="_blank">Paris Saint German</a></h3>
+                    <p>Paris Saint German Home 2026-27</p>
+                    <strong>&#8377;5,095</strong>
+                </article>
+
+                <article class="card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSU6R8Ux4xxIaiKHqmRyPDKcIe56McIaTM9OkZSKS5-3A&s"
+                        alt="Man City">
+                    <h3><a href="https://www.amazon.in/PUMA-Solid-Manchester-Replica-Jersey/dp/B0G1N9MFLM?source=ps-sl-shoppingads-lpcontext&ref_=fplfs&smid=A3L1OUG0B9LM6T&th=1&psc=1"
+                            target="_blank">Manchester City</a></h3>
+                    <p>Manchester City Home 2026-27</p>
+                    <strong>&#8377;6,498</strong>
+                </article>
+
+                <article class="card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQiC-hFNyZ2zvLcQ_r8vIe9HaawHWvIUrHyZTZD7z4g9K9SicSQVUAJV_a&s=10"
+                        alt="Arsenal">
+                    <h3><a href="https://luxury.tatacliq.com/adidas-arsenal-fc-red-slim-fit-printed-jersey/p-mp000000031533392?srsltid=AYCX9vK9m5PVoi724V56xjoVD_Ay-_ggGKNteg6-cGJgszR0M6wuKkyDvqE"
+                            target="_blank">Arsenal</a></h3>
+                    <p>Arsenal Home 2026-27</p>
+                    <strong>&#8377;6,599</strong>
+                </article>
+            </section>
+        </main>
+
+    </div>
+</body>
+
+</html>
